@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+$width-giant : 100%;
+$padding-box-main : 2rem 0;
+$font-size : 16px;
+$color-white: #fff;
+$color-dark-black: #000;
+$color-grayish: gray;
+$weigth-light: 300;
+$weigth-normal: 400;
+$weigth-semi-bold: 500;
+$weigth-bold: 600;
+$weigth-ultra-bold : 700;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: $font-size;
+}
+a{
+    text-decoration: none;
+    color: $color-dark-black;
+}
