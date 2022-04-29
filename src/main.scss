@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 $width-giant : 100%;
+$width-md : 90%;
+// $width-max-md : 1200px;
 $padding-box-main : 2rem 0;
 $font-size : 16px;
 $color-white: #fff;
@@ -11,6 +13,11 @@ $weigth-semi-bold: 500;
 $weigth-bold: 600;
 $weigth-ultra-bold : 700;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: $font-size;
@@ -18,4 +25,185 @@ body{
 a{
     text-decoration: none;
     color: $color-dark-black;
+}
+.container-g{
+    width: $width-giant;
+}
+.container-md{
+    width: $width-md;
+    max-width: 450px;
+}
+.logo{
+    color: $color-white;
+}
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color-white;
+    transition: all 1s ease-in-out;
+    min-height: 550px;
+    height: 100vh;
+    max-height: 1000px;
+    overflow: hidden;
+    background-color: $color-dark-black;
+}
+.btn-header-bg{
+    background-color: $color-grayish;
+    // background-color: red;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 70px;
+}
+.btn-menu{
+    background: $color-white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: .2rem;
+    cursor: pointer;
+    z-index: 999;
+}
+.btn-menu-lines,
+.btn-menu-lines::before,
+.btn-menu-lines::after{
+    content: "";
+    display: block;
+    width: 1.8rem;
+    height: 3px;
+    background: $color-grayish;
+    position: relative;
+}
+.btn-menu-lines::before{
+    top: -8px;
+}
+.btn-menu-lines::after{
+    top: 5px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translateY(-300px);
+    width:95%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 2.1rem 0;
+    border-bottom: 1px solid $color-grayish;
+    border-top: 1px solid $color-grayish;
+    box-shadow: 0 0 15px  $color-grayish;
+    border-radius: .4rem;
+    z-index: 998;
+    transition-duration: 1s;
+    &.open-menu{
+        transform: translateY(270px);
+        width:95%;
+    }
+    .menu_li{
+            display: flex;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+        .menu_a{
+            display: flex;
+            color: $color-grayish;
+            font-size: 1.1rem;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            transition: all .6s ease-in-out;
+            border-radius: .5rem;
+            border-bottom: 1px solid $color-grayish;
+            &.a_sobremi{
+                width: 100px;
+            }
+            &.a_skills{
+                width: 55px;
+            }
+            &.a_portfolio{
+                width: 100px;
+            }
+            &.a_contact{
+                width: 90px;
+            }
+            &:hover{
+                border-bottom: 1px solid $color-grayish;
+                width: 92%;
+                height: 65px;
+                border-radius: 1rem;
+                font-size: 1.2rem;
+                background-color: rgba(0, 0, 0, .6);
+                color: $color-white;
+            }
+        }
+    }
+}
+.presentation{
+    color: $color-white;
+    // background: gray;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    figure{
+        display: none;
+        // img{
+        //     display: none;
+        // }
+    }
+    .presentation_me{
+        width: 50%;
+        max-width: 350px;
+        margin-bottom: 1.5rem;
+        h1{
+            font-size: 3.3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            span{
+                font-weight: $weigth-bold;
+                font-size: 16px;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 1rem;
+            color: rgb(96, 128, 235);
+        }
+    }
+    .presentation_social{
+            // background: gray;
+            width: 130px;
+            display: flex;
+            justify-content: space-between;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                // background-color: red;
+                .link_img{
+                    width: 30px;
+                    transition: all .3s ease-in-out;
+                }
+                &:hover .link_img{
+                    width: 35px;
+                }
+            }
+        }     
 }
