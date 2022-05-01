@@ -10,12 +10,12 @@
 <body>
     <header class="header container-g">
         <nav class="nav container-md">
-            <div class="logo">&#60;ralva&#62;</div>
+            <div class="logo"><span>&#60;</span>ralva<span>&#62;</span></div>
             <div class="btn-menu">
                 <div class="btn-menu-lines"></div>
             </div>
             <ul class="menu">
-                <li class="menu_li"><a href="" class="menu_a a_sobremi">Sobre Mi</a></li>
+                <li class="menu_li"><a href="#about" class="menu_a a_sobremi">Sobre Mi</a></li>
                 <li class="menu_li"><a href="" class="menu_a a_skills">Skills</a></li>
                 <li class="menu_li"><a href="" class="menu_a a_portfolio">Portafolio</a></li>
                 <li class="menu_li"><a href="" class="menu_a a_contact">Contacto</a></li>
@@ -27,36 +27,38 @@
             </figure>
             <div class="presentation_me">
                 <h1><span>¡Bienvenido! Me llamo </span>Renzo Alvarez</h1>
-                <p class="escritura-frontend">Front End Developer</p>
+                <p class="efecto-escritura"><span class="typed"></span></p>
             </div>
             
             <div class="presentation_social">
                 <a href="https://www.linkedin.com/in/renzoalvarez/" target="_blank" rel="noopener">
-                    <img src="./images/linkedin.png" alt="" class="link_img">
+                    <img src="./images/linkedinBlackWhite.png" alt="" class="link_img">
                 </a>
                 <a href="https://github.com/ralvarezrenzo" target="_blank" rel="noopener">
-                    <img src="./images/github-2.png" alt="" class="link_img">
+                    <img src="./images/githubBlackWhite.png" alt="" class="link_img">
                 </a>
                 <a href="https://www.facebook.com/renzo.alvarez.378/" target="_blank" rel="noopener">
-                    <img src="./images/facebook.png" alt="" class="link_img">
+                    <img src="./images/facebookBlackWhite.png" alt="" class="link_img">
                 </a>
             </div>
         </div>
+        <a href="#about" class="arrow"><img src="./images/arrowliladark.png" alt="flecha"></a>
     </header>
     <main class="main container-g">
-        <div class="about container-md">
+        <div id="about" class="about container-md container-pd">
             <h3>Contenedores</h3>
         </div>
-        <div class="skills container-md">
+        <div class="skills container-md container-pd">
             <h3>Contenedores</h3>
         </div>
-        <div class="contact container-md">
+        <div class="contact container-md container-pd">
             <h3>Contenedores</h3>
         </div>
     </main>
     <footer class="container-g">
         <h3></h3>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
    <script src="public/js/index.js" type="module"></script>
 </body>
 </html>

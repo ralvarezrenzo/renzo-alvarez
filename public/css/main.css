@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,36 +26,79 @@ a {
   max-width: 450px;
 }
 
-.logo {
-  color: #fff;
+.container-pd {
+  padding: 4rem 0;
+  min-height: 100vh;
 }
 
 .header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
   transition: all 1s ease-in-out;
-  min-height: 550px;
+  min-height: 600px;
   height: 100vh;
   max-height: 1000px;
   overflow: hidden;
+  position: relative;
   background-color: #000;
+  background: url("/images/codingbluemed.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
-
-.btn-header-bg {
-  background-color: gray;
+.header .logo {
+  color: #fff;
+  font-family: "Caveat", cursive;
+  font-size: 1.9rem;
+}
+.header .logo span {
+  color: rgb(96, 128, 235);
+  color: #773333;
+}
+.header .arrow {
+  position: absolute;
+  bottom: 7vh;
+  transform: rotateZ(90deg);
+  -webkit-animation: arrow 2.6s infinite;
+          animation: arrow 2.6s infinite;
+}
+.header .arrow img {
+  width: 30px;
+}
+@-webkit-keyframes arrow {
+  0% {
+    bottom: 6vh;
+  }
+  50% {
+    bottom: 5vh;
+  }
+  100% {
+    bottom: 6vh;
+  }
+}
+@keyframes arrow {
+  0% {
+    bottom: 6vh;
+  }
+  50% {
+    bottom: 5vh;
+  }
+  100% {
+    bottom: 6vh;
+  }
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
   height: 70px;
+  z-index: 999;
 }
 
 .btn-menu {
+  display: flex;
   background: #fff;
   width: 40px;
   height: 40px;
@@ -152,7 +197,7 @@ a {
 
 .presentation {
   color: #fff;
-  height: 75%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -163,9 +208,9 @@ a {
   display: none;
 }
 .presentation .presentation_me {
-  width: 50%;
+  width: 90%;
   max-width: 350px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.7rem;
 }
 .presentation .presentation_me h1 {
   font-size: 3.3rem;
@@ -175,14 +220,19 @@ a {
 .presentation .presentation_me h1 span {
   font-weight: 600;
   font-size: 16px;
+  display: block;
+  margin: 1rem;
 }
-.presentation .presentation_me p {
+.presentation .presentation_me .efecto-escritura {
+  width: 100%;
   text-align: center;
   font-size: 1rem;
   color: rgb(96, 128, 235);
+  color: #773333;
+  font-weight: 600;
 }
 .presentation .presentation_social {
-  width: 130px;
+  width: 135px;
   display: flex;
   justify-content: space-between;
 }
@@ -191,12 +241,22 @@ a {
   justify-content: center;
   align-items: center;
   width: 40px;
+  background-color: transparent;
   height: 40px;
 }
 .presentation .presentation_social a .link_img {
   width: 30px;
   transition: all 0.3s ease-in-out;
+  background: #fff;
+  border-radius: 50%;
 }
 .presentation .presentation_social a:hover .link_img {
-  width: 35px;
+  width: 40px;
+  background: #773333;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
