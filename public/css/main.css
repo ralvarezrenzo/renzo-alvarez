@@ -42,7 +42,7 @@ a {
   overflow: hidden;
   position: relative;
   background-color: #000;
-  background: url("/images/codingbluemed.jpg") no-repeat center center fixed;
+  background: url("../codingbluemed.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 .header .logo {
