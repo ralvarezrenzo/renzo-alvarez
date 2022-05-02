@@ -3,6 +3,6 @@ import escritura from "./modules/escritura.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded",e=>{
-    menuOpen(".btn-menu",".menu",".header")
+    menuOpen(".btn-menu",".menu",".header",".menu_li a")
     escritura();
 })
