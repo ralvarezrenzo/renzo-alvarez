@@ -48,13 +48,13 @@ a{
     align-items: center;
     flex-direction: column;
     transition: all 1s ease-in-out;
-    min-height: 600px;
+    min-height: 550px;
     height: 100vh;
     max-height: 1000px;
     overflow: hidden;
     position: relative;
     background-color: $color-dark-black;
-    background: url('/images/codingbluemed.jpg') no-repeat center center fixed;
+    background: url('../codingbluemed.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -70,7 +70,7 @@ a{
     }
     .arrow{
         position: absolute;
-        bottom: 7vh;
+        bottom: 10vh;
         transform: rotateZ(90deg);
         animation: arrow 2.6s infinite;
         img{
@@ -78,14 +78,14 @@ a{
         }
         @keyframes arrow {
         0%{
-            bottom: 6vh;
+            bottom: 15vh;
         }
         50%{
-            bottom: 5vh;
+            bottom: 13vh;
             
         }
         100%{
-            bottom: 6vh;
+            bottom: 15vh;
 
         }
     }
@@ -200,7 +200,7 @@ a{
 .presentation{
     color: $color-white;
     // background: gray;
-    height: 95%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     position: relative;

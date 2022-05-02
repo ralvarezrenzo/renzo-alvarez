@@ -36,7 +36,7 @@ a {
   align-items: center;
   flex-direction: column;
   transition: all 1s ease-in-out;
-  min-height: 600px;
+  min-height: 550px;
   height: 100vh;
   max-height: 1000px;
   overflow: hidden;
@@ -56,7 +56,7 @@ a {
 }
 .header .arrow {
   position: absolute;
-  bottom: 7vh;
+  bottom: 10vh;
   transform: rotateZ(90deg);
   -webkit-animation: arrow 2.6s infinite;
           animation: arrow 2.6s infinite;
@@ -66,24 +66,24 @@ a {
 }
 @-webkit-keyframes arrow {
   0% {
-    bottom: 6vh;
+    bottom: 15vh;
   }
   50% {
-    bottom: 5vh;
+    bottom: 13vh;
   }
   100% {
-    bottom: 6vh;
+    bottom: 15vh;
   }
 }
 @keyframes arrow {
   0% {
-    bottom: 6vh;
+    bottom: 15vh;
   }
   50% {
-    bottom: 5vh;
+    bottom: 13vh;
   }
   100% {
-    bottom: 6vh;
+    bottom: 15vh;
   }
 }
 
@@ -197,7 +197,7 @@ a {
 
 .presentation {
   color: #fff;
-  height: 95%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   position: relative;
