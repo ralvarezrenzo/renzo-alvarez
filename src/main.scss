@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 
 $width-giant : 100%;
 $width-md : 90%;
@@ -9,6 +10,7 @@ $font-size : 16px;
 $color-white: #fff;
 $color-dark-black: #000;
 $color-grayish: gray;
+$color-grayish-dark: #616161;
 $color-lila:#773333;
 $weigth-light: 300;
 $weigth-normal: 400;
@@ -16,6 +18,7 @@ $weigth-semi-bold: 500;
 $weigth-bold: 600;
 $weigth-ultra-bold : 700;
 $font-logo: 'Caveat', cursive;
+$font-oswald: 'Oswald';
 
 *{
     margin: 0;
@@ -39,14 +42,15 @@ a{
     max-width: 450px;
 }
 .container-pd{
-    padding: 5rem 0;
+    padding: 6rem 0;
     min-height: 100vh;
 }
 .subtitles{
-    font-size: 2rem;
+    font-size: 3rem;
     position: relative;
     display: block;
-    // color: ;
+    color: $color-grayish-dark;
+    font-family: $font-oswald;
     // background: red;
     span{
         position: relative;
@@ -118,12 +122,20 @@ a{
 }
 .nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     height: 70px;
     z-index: 999;
+    background-color: rgba( 0, 0 ,0, .9);
+}
+.nav_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100%;
 }
 .btn-menu{
     display: flex;
@@ -145,7 +157,7 @@ a{
     display: block;
     width: 1.8rem;
     height: 3px;
-    background: $color-grayish;
+    background: $color-grayish-dark;
     position: relative;
 }
 .btn-menu-lines::before{
@@ -168,8 +180,8 @@ a{
     right: 0;
     margin: 0 auto;
     padding: 2.1rem 0;
-    border-bottom: 1px solid $color-grayish;
-    border-top: 1px solid $color-grayish;
+    // border-bottom: 1px solid $color-grayish;
+    // border-top: 1px solid $color-grayish;
     box-shadow: 0 0 15px  $color-grayish;
     border-radius: .4rem;
     z-index: 998;
@@ -186,19 +198,25 @@ a{
             justify-content: center;
         .menu_a{
             display: flex;
-            color: $color-grayish;
-            font-size: 1.1rem;
+            color: $color-grayish-dark;
+            font-size: 1.2rem;
+            font-weight: $weigth-normal;
             height: 50px;
             align-items: center;
             justify-content: center;
             transition: all .6s ease-in-out;
-            border-radius: .5rem;
-            border-bottom: 1px solid $color-grayish;
+            font-family: $font-oswald;
+            // border-radius: .5rem;
+            // border-bottom: 2px solid $color-grayish-dark;
+            // border-bottom: 2px solid $color-lila;
+            span{
+                color: $color-lila;
+            }
             &.a_sobremi{
                 width: 100px;
             }
             &.a_skills{
-                width: 55px;
+                width: 60px;
             }
             &.a_portfolio{
                 width: 100px;
@@ -207,13 +225,14 @@ a{
                 width: 90px;
             }
             &:hover{
-                border-bottom: 1px solid $color-grayish;
-                width: 92%;
-                height: 65px;
-                border-radius: 1rem;
-                font-size: 1.2rem;
-                background-color: rgba(0, 0, 0, .6);
-                color: $color-white;
+                // border-bottom: 1px solid $color-grayish;
+                // width: 92%;
+                // height: 65px;
+                // border-radius: 1rem;
+                font-size: 1.3rem;
+                // background-color: rgba(0, 0, 0, .6);
+                // background-color: $color-lila;
+                // color: $color-white;
             }
         }
     }
