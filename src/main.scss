@@ -4,7 +4,7 @@
 
 $width-giant : 100%;
 $width-md : 90%;
-// $width-max-md : 1200px;
+$width-max-md : 450px;
 $padding-box-main : 2rem 0;
 $font-size : 16px;
 $color-white: #fff;
@@ -39,10 +39,10 @@ a{
 }
 .container-md{
     width: $width-md;
-    max-width: 450px;
+    max-width: $width-max-md;
 }
 .container-pd{
-    padding: 6rem 0;
+    padding: 6rem 0 0;
     min-height: 100vh;
 }
 .subtitles{
@@ -206,23 +206,32 @@ a{
             justify-content: center;
             transition: all .6s ease-in-out;
             font-family: $font-oswald;
+            gap: .4rem;
+            // background: gray;
             // border-radius: .5rem;
             // border-bottom: 2px solid $color-grayish-dark;
             // border-bottom: 2px solid $color-lila;
+            img{
+                width: 1.2rem;
+                // margin-right: .5rem;
+            }
             span{
+                position: relative;
+                top: -2px;
+                // margin-left: .5rem;
                 color: $color-lila;
             }
             &.a_sobremi{
-                width: 100px;
+                width: 135px;
             }
             &.a_skills{
-                width: 60px;
-            }
-            &.a_portfolio{
                 width: 100px;
             }
+            &.a_portfolio{
+                width: 135px;
+            }
             &.a_contact{
-                width: 90px;
+                width: 125px;
             }
             &:hover{
                 // border-bottom: 1px solid $color-grayish;
@@ -306,4 +315,78 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    // background: red;
+    h2{
+        width: 100%;
+    }
+    .about_element{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        h3{
+            color: $color-lila;
+        }
+        p{
+            letter-spacing: .5px;
+            line-height: 1.5rem;
+        }
+        .about_info{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .about_destrezas{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        figure{
+            width : 200px;
+            height: 300px;
+            img{
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+footer{
+    text-align: center;
+    color: $color-white;
+    background-color: rgba( 0, 0 ,0, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+@media screen and (min-width: 992px){
+    $width-md : 90%;
+    $width-max-md : 900px;
+    .container-md{
+        width: $width-md;
+        max-width: $width-max-md;
+    }
+}
+@media screen and (min-width: 1200px){
+    $width-md : 90%;
+    $width-max-md : 1100px;
+    .container-md{
+        width: $width-md;
+        max-width: $width-max-md;
+    }
 }
