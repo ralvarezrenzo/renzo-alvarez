@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,6 +38,7 @@ a {
   font-size: 3rem;
   position: relative;
   display: block;
+  font-weight: 400;
   color: #616161;
   font-family: "Oswald";
 }
@@ -130,14 +133,12 @@ a {
 
 .btn-menu {
   display: flex;
-  background: #fff;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  border-radius: 0.2rem;
   cursor: pointer;
   z-index: 999;
 }
@@ -149,7 +150,7 @@ a {
   display: block;
   width: 1.8rem;
   height: 3px;
-  background: #616161;
+  background-color: #fff;
   position: relative;
 }
 
@@ -176,7 +177,6 @@ a {
   margin: 0 auto;
   padding: 2.1rem 0;
   box-shadow: 0 0 15px gray;
-  border-radius: 0.4rem;
   z-index: 998;
   transition-duration: 1s;
 }
@@ -206,9 +206,11 @@ a {
 .menu .menu_li .menu_a img {
   width: 1.2rem;
 }
-.menu .menu_li .menu_a span {
+.menu .menu_li .menu_a .menu_span {
   position: relative;
-  top: -2px;
+}
+.menu .menu_li .menu_a .menu_span span {
+  margin-left: 0.1rem;
   color: #773333;
 }
 .menu .menu_li .menu_a.a_sobremi {
@@ -309,6 +311,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  color: #616161;
 }
 .about .about_element h3 {
   color: #773333;
@@ -316,6 +319,7 @@ a {
 .about .about_element p {
   letter-spacing: 0.5px;
   line-height: 1.5rem;
+  color: #616161;
 }
 .about .about_element .about_info {
   width: 100%;
@@ -324,12 +328,18 @@ a {
   align-items: flex-start;
   gap: 1rem;
 }
-.about .about_element .about_destrezas {
+.about .about_element .about_info p span {
+  font-weight: 700;
+}
+.about .about_element .about_data {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+}
+.about .about_element .about_data .about_destrezas .li_destrezas span {
+  font-weight: 700;
 }
 .about .about_element figure {
   width: 200px;

@@ -7,6 +7,7 @@ $width-md : 90%;
 $width-max-md : 450px;
 $padding-box-main : 2rem 0;
 $font-size : 16px;
+// Primary colors
 $color-white: #fff;
 $color-dark-black: #000;
 $color-grayish: gray;
@@ -20,7 +21,9 @@ $weigth-ultra-bold : 700;
 $font-logo: 'Caveat', cursive;
 $font-oswald: 'Oswald';
 
-*{
+*,
+::after,
+::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,6 +52,7 @@ a{
     font-size: 3rem;
     position: relative;
     display: block;
+    font-weight: $weigth-normal;
     color: $color-grayish-dark;
     font-family: $font-oswald;
     // background: red;
@@ -116,10 +120,6 @@ a{
     }
     }
 }
-.btn-header-bg{
-    // background: $color-grayish;
-    // background-color: red;
-}
 .nav{
     display: flex;
     justify-content: center;
@@ -139,14 +139,14 @@ a{
 }
 .btn-menu{
     display: flex;
-    background: $color-white;
+    // background: $color-white;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    border-radius: .2rem;
+    // border-radius: .2rem;
     cursor: pointer;
     z-index: 999;
 }
@@ -157,7 +157,7 @@ a{
     display: block;
     width: 1.8rem;
     height: 3px;
-    background: $color-grayish-dark;
+    background-color: $color-white;
     position: relative;
 }
 .btn-menu-lines::before{
@@ -183,7 +183,7 @@ a{
     // border-bottom: 1px solid $color-grayish;
     // border-top: 1px solid $color-grayish;
     box-shadow: 0 0 15px  $color-grayish;
-    border-radius: .4rem;
+    // border-radius: .4rem;
     z-index: 998;
     transition-duration: 1s;
     &.open-menu{
@@ -213,13 +213,16 @@ a{
             // border-bottom: 2px solid $color-lila;
             img{
                 width: 1.2rem;
-                // margin-right: .5rem;
+                // margin-right: .4rem;
             }
-            span{
+            .menu_span{
                 position: relative;
-                top: -2px;
-                // margin-left: .5rem;
-                color: $color-lila;
+                // top: -2px;
+                span{
+                    
+                    margin-left: .1rem;
+                    color: $color-lila;
+                }
             }
             &.a_sobremi{
                 width: 135px;
@@ -332,12 +335,15 @@ a{
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        color: $color-grayish-dark;
         h3{
             color: $color-lila;
+            // font-size: 1.2rem;
         }
         p{
             letter-spacing: .5px;
             line-height: 1.5rem;
+            color: $color-grayish-dark;
         }
         .about_info{
             width: 100%;
@@ -345,13 +351,23 @@ a{
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
+            p span{
+                font-weight: $weigth-ultra-bold;
+            }
         }
-        .about_destrezas{
+        .about_data{
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
+            .about_destrezas{
+                .li_destrezas{
+                    span{
+                        font-weight: $weigth-ultra-bold;
+                    }
+                }
+            }
         }
         figure{
             width : 200px;
