@@ -259,10 +259,8 @@ a{
     justify-content: center;
     align-items: center;
     figure{
-        display: none;
-        // img{
-        //     display: none;
-        // }
+        position: relative;
+        left: 10px;
     }
     .presentation_me{
         width: 90%;
@@ -328,6 +326,7 @@ a{
     // background: red;
     h2{
         width: 100%;
+        // text-align: center;
     }
     .about_element{
         width: 100%;
@@ -338,12 +337,7 @@ a{
         color: $color-grayish-dark;
         h3{
             color: $color-lila;
-            // font-size: 1.2rem;
-        }
-        p{
-            letter-spacing: .5px;
-            line-height: 1.5rem;
-            color: $color-grayish-dark;
+            font-size: 1.5rem;
         }
         .about_info{
             width: 100%;
@@ -351,6 +345,11 @@ a{
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
+            p{
+            letter-spacing: .5px;
+            line-height: 1.5rem;
+            color: $color-grayish-dark;
+            }
             p span{
                 font-weight: $weigth-ultra-bold;
             }
@@ -363,19 +362,103 @@ a{
             gap: 1rem;
             .about_destrezas{
                 .li_destrezas{
-                    span{
+                    p{
+                        color: red;
+                        letter-spacing: .5px;
+                        line-height: 1.5rem;
+                        color: $color-grayish-dark;
                         font-weight: $weigth-ultra-bold;
                     }
                 }
             }
         }
-        figure{
+        .about_figure{
             width : 200px;
-            height: 300px;
+            height: 200px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%,0% 75%, 0% 25%);
+            // border-radius: 50%;
             img{
+                // border-radius: 50%;
                 width: 100%;
                 height: 100%;
                 box-sizing: border-box;
+            }
+        }
+        .about_data{
+            .about_destrezas{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                flex-wrap: wrap;
+                gap : .5rem;
+                .li_destrezas{
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .portfolio_work{
+        border-radius: 1rem;
+        img{
+            border-radius: 1rem 1rem 0 0;
+            display: block;
+        }
+    }
+    .portfolio_figure{
+        width: 100%;
+        a{
+            width: 100%;
+        }
+    }
+    .portfolio_info{
+        width: 100%;
+        color: $color-white;
+        background-color: rgba( 0, 0 ,0, .9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 2rem 2rem;
+        border-radius: 0 0 1rem 1rem;
+        gap: 2rem;
+        h3{
+        }
+        .portfolio_data{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            // background: green;
+            gap: 1rem;
+        }
+        .data{
+            // width: 80px;
+            padding: .4rem 1rem;
+            border-radius: .5rem;
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            background-color: $color-white;
+            color: $color-grayish;
+            img{
+                width: 25px;
+            }
+        }
+        .portfolio_enlace{
+            background-color: $color-lila;
+            color: $color-white;
+            padding: .4rem 1rem;
+            border-radius: .5rem;
+            border: 1px solid $color-white;
+            transition-duration: .5s;
+            &:hover{
+                transform: scale(1.1);
             }
         }
     }
