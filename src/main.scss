@@ -311,6 +311,15 @@ a{
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    h3{
+        color: $color-lila;
+            // font-size: 1.5rem;
+    }
+    p{
+        letter-spacing: .5px;
+        line-height: 1.5rem;
+        color: $color-grayish-dark;
+        }
 }
 .about{
     display: flex;
@@ -462,6 +471,8 @@ a{
         border-radius: 0 0 1rem 1rem;
         gap: 2rem;
         h3{
+            color: $color-white;
+            font-size: 1.3rem;
         }
         .portfolio_data{
             width: 100%;
@@ -484,6 +495,24 @@ a{
                 width: 25px;
             }
         }
+        .enlaces_verweb{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+        }
+        .portfolio-git_enlace{
+            background-color: $color-white;
+            color: $color-dark-black;
+            padding: .4rem 1rem;
+            border-radius: .5rem;
+            border: 1px solid $color-dark-black;
+            font-weight: bold;
+            transition-duration: .5s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
         .portfolio_enlace{
             background-color: $color-lila;
             color: $color-white;
@@ -498,6 +527,54 @@ a{
     }
 }
 
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 6rem;
+    h2{
+        text-align: center;
+        width: 100%;
+    }
+    .contact_content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contact_social{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            h3{
+                width: 100%;
+                text-align: left;
+            }
+            p{
+                color: $color-grayish;
+                text-align: center;
+            }
+            .contact_icons{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 30%;
+                gap: 1rem;
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    color: $color-grayish-dark;
+                }
+                img{
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
 footer{
     text-align: center;
     color: $color-white;
@@ -505,7 +582,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 70px;
+    font-size: 16px;
 }
 @media screen and (min-width: 992px){
     $width-md : 875px;
@@ -647,6 +725,34 @@ footer{
             width: 47%;
         }
     }
+    .contact{
+        gap: 4rem;
+        h2{
+            text-align: left;
+        }
+        .contact_content{
+            .contact_social{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .contact_icons{
+                    width: 23%;
+                    align-items: flex-start;
+                    // background-color: green;
+                    a{
+                        width: 100%;
+                        // background: red;
+                        justify-content:space-between;
+                    }
+                }
+                p{
+                    width: 40%;
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
 @media screen and (min-width: 1200px){
     $width-md : 1080px;
@@ -700,6 +806,35 @@ footer{
     }
     .portfolio_work{
         width: 31%;
+    }
+}
+.contact{
+    gap: 4rem;
+    h2{
+        text-align: left;
+    }
+    .contact_content{
+        .contact_social{
+            gap: 3.5rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .contact_icons{
+                width: 20%;
+                align-items: flex-start;
+                // background-color: green;
+                a{
+                    width: 100%;
+                    // background: red;
+                    justify-content:space-between;
+                }
+            }
+            p{
+                width: 40%;
+                text-align: left;
+            }
+        }
     }
 }
 }
