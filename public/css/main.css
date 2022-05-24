@@ -31,7 +31,6 @@ a {
 
 .container-pd {
   padding: 6rem 0 0;
-  min-height: 100vh;
 }
 
 .subtitles {
@@ -61,7 +60,7 @@ a {
   align-items: center;
   flex-direction: column;
   transition: all 1s ease-in-out;
-  min-height: 550px;
+  min-height: 650px;
   height: 100vh;
   max-height: 1000px;
   overflow: hidden;
@@ -81,7 +80,7 @@ a {
 }
 .header .arrow {
   position: absolute;
-  bottom: 10vh;
+  bottom: 40px;
   transform: rotateZ(90deg);
   -webkit-animation: arrow 2.6s infinite;
           animation: arrow 2.6s infinite;
@@ -91,24 +90,24 @@ a {
 }
 @-webkit-keyframes arrow {
   0% {
-    bottom: 15vh;
+    bottom: 40px;
   }
   50% {
-    bottom: 13vh;
+    bottom: 30px;
   }
   100% {
-    bottom: 15vh;
+    bottom: 40px;
   }
 }
 @keyframes arrow {
   0% {
-    bottom: 15vh;
+    bottom: 40px;
   }
   50% {
-    bottom: 13vh;
+    bottom: 30px;
   }
   100% {
-    bottom: 15vh;
+    bottom: 40px;
   }
 }
 
@@ -163,6 +162,7 @@ a {
 }
 
 .menu {
+  transition-duration: 1s;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -178,7 +178,6 @@ a {
   padding: 2.1rem 0;
   box-shadow: 0 0 15px gray;
   z-index: 998;
-  transition-duration: 1s;
 }
 .menu.open-menu {
   transform: translateY(270px);
@@ -231,7 +230,7 @@ a {
 
 .presentation {
   color: #fff;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -241,6 +240,9 @@ a {
 .presentation figure {
   position: relative;
   left: 10px;
+}
+.presentation .taza {
+  width: 100px;
 }
 .presentation .presentation_me {
   width: 90%;
@@ -301,7 +303,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 .about h2 {
   width: 100%;
@@ -311,37 +313,42 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   color: #616161;
 }
 .about .about_element h3 {
   color: #773333;
   font-size: 1.5rem;
 }
-.about .about_element .about_info {
+.about .about_element .about_text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+.about .about_element .about_text .about_info {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
 }
-.about .about_element .about_info p {
+.about .about_element .about_text .about_info p {
   letter-spacing: 0.5px;
   line-height: 1.5rem;
   color: #616161;
 }
-.about .about_element .about_info p span {
+.about .about_element .about_text .about_info p span {
   font-weight: 700;
 }
-.about .about_element .about_data {
+.about .about_element .about_text .about_data {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
 }
-.about .about_element .about_data .about_destrezas .li_destrezas p {
-  color: red;
+.about .about_element .about_text .about_data .about_destrezas .li_destrezas p {
   letter-spacing: 0.5px;
   line-height: 1.5rem;
   color: #616161;
@@ -350,13 +357,16 @@ a {
 .about .about_element .about_figure {
   width: 200px;
   height: 200px;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 0 50px gray;
+  border-radius: 50%;
 }
 .about .about_element .about_figure img {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  transform: scale(1.2);
 }
 .about .about_element .about_data .about_destrezas {
   width: 100%;
@@ -370,13 +380,48 @@ a {
   width: 40%;
 }
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.skills .skills_content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.skills .skills_content .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  gap: 1rem;
+}
+.skills .skills_content .skill img {
+  width: 100px;
+}
+.skills .skills_content .skill p {
+  color: gray;
+  font-weight: bold;
+}
+
 .portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
+.portfolio .portfolio_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
 .portfolio .portfolio_work {
+  width: 100%;
   border-radius: 1rem;
 }
 .portfolio .portfolio_work img {
@@ -443,13 +488,180 @@ footer {
 
 @media screen and (min-width: 992px) {
   .container-md {
-    width: 90%;
+    width: 875px;
     max-width: 900px;
+  }
+
+  .header .arrow img {
+    width: 40px;
+  }
+
+  .btn-menu {
+    display: none;
+  }
+
+  .menu {
+    position: initial;
+    transform: translateY(0);
+    width: 80%;
+    flex-direction: row;
+    padding: 0;
+    transition-duration: initial;
+    justify-content: flex-end;
+    background: transparent;
+    box-shadow: none;
+    gap: 1.5rem;
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu.open-menu {
+    transform: initial;
+  }
+  .menu .menu_li {
+    height: 100%;
+    width: auto;
+  }
+  .menu .menu_li .menu_a {
+    color: #fff;
+  }
+
+  .presentation .taza {
+    width: 150px;
+  }
+  .presentation .presentation_me {
+    max-width: 900px;
+  }
+  .presentation .presentation_me h1 {
+    font-size: 4.6rem;
+  }
+  .presentation .presentation_me h1 span {
+    font-size: 1.5rem;
+  }
+  .presentation .presentation_me .efecto-escritura {
+    font-size: 1.6rem;
+  }
+  .presentation .presentation_social {
+    width: 180px;
+  }
+  .presentation .presentation_social a {
+    width: 50px;
+    height: 50px;
+  }
+  .presentation .presentation_social a .link_img {
+    width: 40px;
+  }
+  .presentation .presentation_social a:hover .link_img {
+    width: 50px;
+  }
+
+  .about .about_element {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about .about_element .about_text {
+    width: 70%;
+  }
+  .about .about_element .about_text .about_info {
+    width: 100%;
+  }
+  .about .about_element .about_text .about_data {
+    width: 100%;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.5rem;
+  }
+  .skills .skills_content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .skills .skills_content .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    gap: 1rem;
+  }
+  .skills .skills_content .skill img {
+    width: 100px;
+  }
+  .skills .skills_content .skill p {
+    color: gray;
+    font-weight: bold;
+  }
+
+  .portfolio {
+    gap: 4.5rem;
+  }
+  .portfolio h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .portfolio .portfolio_content {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .portfolio .portfolio_work {
+    width: 47%;
   }
 }
 @media screen and (min-width: 1200px) {
   .container-md {
-    width: 90%;
+    width: 1080px;
+    max-width: 1080px;
+  }
+
+  .presentation .presentation_me {
     max-width: 1100px;
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+  .skills .skills_content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .skills .skills_content .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    gap: 1rem;
+  }
+  .skills .skills_content .skill img {
+    width: 100px;
+  }
+  .skills .skills_content .skill p {
+    color: gray;
+    font-weight: bold;
+  }
+
+  .portfolio {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+  .portfolio h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .portfolio .portfolio_work {
+    width: 31%;
   }
 }/*# sourceMappingURL=main.css.map */
