@@ -77,8 +77,8 @@ a{
     align-items: center;
     flex-direction: column;
     transition: all 1s ease-in-out;
-    min-height: 650px;
-    height: 100vh;
+    min-height: 50vh;
+    height: 660px;
     max-height: 1000px;
     overflow: hidden;
     position: relative;
@@ -413,7 +413,7 @@ a{
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 150px;
+            width: 125px;
             gap: 1rem;
             img{
                 width: 100px;
